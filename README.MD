@@ -19,8 +19,12 @@ Requirements:
   WebSocket library ('ws')
 
 SET UP:
+  mkdir chess-like-game
+  cd chess-like-game
+  npm init -y
  installation:
    Install Dependencies:  npm install
+                          npm install ws express
 
    Start the Server:   node server.js
 
