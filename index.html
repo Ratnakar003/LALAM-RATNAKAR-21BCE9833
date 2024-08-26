@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chess-like Game</title>
+    <style>
+        #game-board {
+            display: grid;
+            grid-template-columns: repeat(5, 50px);
+            grid-template-rows: repeat(5, 50px);
+            gap: 1px;
+        }
+        .cell {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .cell.occupied.A {
+            background-color: lightblue;
+        }
+        .cell.occupied.B {
+            background-color: lightcoral;
+        }
+        .cell.selected {
+            border: 2px solid black;
+        }
+        .player-info, #move-history {
+            margin: 10px;
+        }
+        #valid-moves {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chess-like Game</h1>
+    <div class="player-info" id="player-info">Player: </div>
+    <div id="game-board"></div>
+    <div id="valid-moves"></div>
+    <div id="move-history"></div>
+    <button id="new-game">Start New Game</button>
+    <script src="game.js"></script>
+</body>
+</html>
